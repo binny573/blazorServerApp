@@ -1,4 +1,7 @@
 is_global = true
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudAllowedAttributeList = 
 build_property.TargetFramework = net9.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
@@ -34,6 +37,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/bi.patel/projects/Blazor project/BlazorApp/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/bi.patel/projects/Blazor project/BlazorApp/Components/Pages/MudBlazzy.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NdWRCbGF6enkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/bi.patel/projects/Blazor project/BlazorApp/Components/Pages/Users.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Vc2Vycy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/bi.patel/projects/Blazor project/BlazorApp/Components/Pages/VehicleOffers.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9WZWhpY2xlT2ZmZXJzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/bi.patel/projects/Blazor project/BlazorApp/Components/Pages/Weather.razor]

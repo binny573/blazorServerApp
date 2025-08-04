@@ -1,0 +1,21 @@
+@page "/users"
+@using BlazorApp.Db
+@using Microsoft.EntityFrameworkCore
+@inject AppDbContext Db
+
+<h3>Users</h3>
+
+<ul>
+    @foreach (var user in customers)
+    {
+        <li>@user.firstname @user.lastname</li>
+    }
+</ul>
+
+@code {
+    private List<Customer> customers = new();
+    protected override async Task OnInitializedAsync()
+    {
+        customers = await Db.Customers.ToListAsync();
+    }
+}

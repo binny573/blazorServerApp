@@ -1,0 +1,46 @@
+@page "/vehicle-offers"
+@using Azure.Data.Tables
+@using BlazorApp.Table
+@inject TableServiceClient TableClient
+
+<h3>Vehicle Offers</h3>
+
+@if (offers == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        @foreach (var offer in offers)
+        {
+            <li>
+                <strong>@offer.Vehicle</strong> 
+                <strong>@offer.Price</strong> 
+                <strong>@offer.Company</strong> 
+            </li>
+        }
+    </ul>
+}
+@code {
+    private List<Table.VehicleOfferEntity>? offers;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var table = TableClient.GetTableClient("VehicleOffers");
+
+        // Ensure the table exists (optional)
+        await table.CreateIfNotExistsAsync();
+
+        var query = table.QueryAsync<Table.VehicleOfferEntity>();
+
+        offers = new List<Table.VehicleOfferEntity>();
+
+        await foreach (var entity in query)
+        {
+            Console.WriteLine($"Here is the entity {entity.Price}");
+            offers.Add(entity);
+        }
+        Console.WriteLine($"Loaded {offers} vehicle offers.");
+    }
+}
